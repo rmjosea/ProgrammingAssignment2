@@ -8,7 +8,6 @@
 ## 4. Get the inverse matrix
 
 ## Write a short comment describing this function
-
 makeCacheMatrix <- function(x = matrix()) {
   ## Inicialization of matrix
   m <- NULL
@@ -28,10 +27,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve check if matrix is in reverse, in case it is tru
+## cacheSolve check if matrix is inverse, in case it is true
 ## return matrix
-## otherwise reverse the matrix and return the matrix reverse
-
+## otherwise inverse the matrix
 cacheSolve <- function(x, ...) {
         m <- x$getInverse() ## get inverse matrix 
         
@@ -41,7 +39,7 @@ cacheSolve <- function(x, ...) {
         }
         ## Case inverse matrix is not calculated
         matrix <- x$get() ## Get matrix 
-        m <- solve(matrix)
+        m <- solve(matrix) ## calculate inverse matrix with solve function
         ## Return a matrix that is the inverse of 'x'
         m
-        }
+}
